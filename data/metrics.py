@@ -18,7 +18,7 @@ def calculate_crps(target, pred, num_quantiles=20):
 import jax
 from jax import grad,vmap
 from .serialize import serialize_arr, SerializerSettings
-import openai
+#import openai
 
 def nll(input_arr, target_arr, model, settings:SerializerSettings, transform, count_seps=True, prompt=None, temp=1):
     """ Returns the NLL/dimension (log base e) of the target array (continuous) according to the LM 
@@ -38,7 +38,7 @@ def nll(input_arr, target_arr, model, settings:SerializerSettings, transform, co
         prompt = input_str + settings.time_sep + target_str
     else:
         prompt = input_str + target_str
-    response = openai.Completion.create(model=model, prompt=prompt, logprobs=5, max_tokens=0, echo=True, temperature=temp)
+    #response = openai.Completion.create(model=model, prompt=prompt, logprobs=5, max_tokens=0, echo=True, temperature=temp)
     #print(response['choices'][0])
     logprobs = np.array(response['choices'][0].logprobs.token_logprobs, dtype=np.float32)
     tokens = np.array(response['choices'][0].logprobs.tokens)
