@@ -4,9 +4,9 @@ os.environ['OMP_NUM_THREADS'] = '4'
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import openai
-openai.api_key = os.environ['OPENAI_API_KEY']
-openai.api_base = os.environ.get("OPENAI_API_BASE", "https://api.openai.com/v1")
+#import openai
+#openai.api_key = os.environ['OPENAI_API_KEY']
+#openai.api_base = os.environ.get("OPENAI_API_BASE", "https://api.openai.com/v1")
 from data.serialize import SerializerSettings
 from models.utils import grid_iter
 from models.promptcast import get_promptcast_predictions_data
@@ -93,10 +93,10 @@ promptcast_hypers = dict(
 arima_hypers = dict(p=[12,30], d=[1,2], q=[0])
 
 model_hypers = {
-     'LLMTime GPT-3.5': {'model': 'gpt-3.5-turbo-instruct', **gpt3_hypers},
-     'LLMTime GPT-4': {'model': 'gpt-4', **gpt4_hypers},
-     'LLMTime GPT-3': {'model': 'text-davinci-003', **gpt3_hypers},
-     'PromptCast GPT-3': {'model': 'text-davinci-003', **promptcast_hypers},
+     #'LLMTime GPT-3.5': {'model': 'gpt-3.5-turbo-instruct', **gpt3_hypers},
+     #'LLMTime GPT-4': {'model': 'gpt-4', **gpt4_hypers},
+     #'LLMTime GPT-3': {'model': 'text-davinci-003', **gpt3_hypers},
+     #'PromptCast GPT-3': {'model': 'text-davinci-003', **promptcast_hypers},
      'LLMA2': {'model': 'llama-7b', **llma2_hypers},
      'mistral': {'model': 'mistral', **llma2_hypers},
      'mistral-api-tiny': {'model': 'mistral-api-tiny', **mistral_api_hypers},
