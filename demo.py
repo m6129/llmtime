@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 #openai.api_base = os.environ.get("OPENAI_API_BASE", "https://api.openai.com/v1")
 from data.serialize import SerializerSettings
 from models.utils import grid_iter
-from models.promptcast import get_promptcast_predictions_data
+#from models.promptcast import get_promptcast_predictions_data
 from models.darts import get_arima_predictions_data
 from models.llmtime import get_llmtime_predictions_data
 from data.small_context import get_datasets
