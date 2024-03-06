@@ -1,5 +1,5 @@
 from data.serialize import serialize_arr, SerializerSettings
-import openai
+#import openai
 import tiktoken
 import numpy as np
 from jax import grad,vmap
