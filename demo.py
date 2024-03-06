@@ -127,7 +127,7 @@ out = {}
 
 for model in model_names: # GPT-4 takes a about a minute to run
     model_hypers[model].update({'dataset_name': ds_name}) # for promptcast
-    hypers = list(grid_iter(model_hypers[model]))
+    #hypers = list(grid_iter(model_hypers[model]))
     num_samples = 10
     pred_dict = get_autotuned_predictions_data(train, test, hypers, num_samples, model_predict_fns[model], verbose=False, parallel=False)
     out[model] = pred_dict
