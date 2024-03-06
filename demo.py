@@ -45,13 +45,13 @@ def plot_preds(train, test, pred_dict, model_name, show_samples=False):
 print(torch.cuda.max_memory_allocated())
 print()
 
-gpt4_hypers = dict(
-    alpha=0.3,
-    basic=True,
-    temp=1.0,
-    top_p=0.8,
-    settings=SerializerSettings(base=10, prec=3, signed=True, time_sep=', ', bit_sep='', minus_sign='-')
-)
+#gpt4_hypers = dict(
+#    alpha=0.3,
+#    basic=True,
+#    temp=1.0,
+#    top_p=0.8,
+#    settings=SerializerSettings(base=10, prec=3, signed=True, time_sep=', ', bit_sep='', minus_sign='-')
+#)
 
 mistral_api_hypers = dict(
     alpha=0.3,
@@ -61,13 +61,13 @@ mistral_api_hypers = dict(
     settings=SerializerSettings(base=10, prec=3, signed=True, time_sep=', ', bit_sep='', minus_sign='-')
 )
 
-gpt3_hypers = dict(
-    temp=0.7,
-    alpha=0.95,
-    beta=0.3,
-    basic=False,
-    settings=SerializerSettings(base=10, prec=3, signed=True, half_bin_correction=True)
-)
+#gpt3_hypers = dict(
+#    temp=0.7,
+#    alpha=0.95,
+#    beta=0.3,
+#    basic=False,
+#    settings=SerializerSettings(base=10, prec=3, signed=True, half_bin_correction=True)
+#)
 
 
 llma2_hypers = dict(
@@ -79,16 +79,16 @@ llma2_hypers = dict(
 )
 
 
-promptcast_hypers = dict(
-    temp=0.7,
-    settings=SerializerSettings(base=10, prec=0, signed=True, 
-                                time_sep=', ',
-                                bit_sep='',
-                                plus_sign='',
-                                minus_sign='-',
-                                half_bin_correction=False,
-                                decimal_point='')
-)
+#promptcast_hypers = dict(
+#    temp=0.7,
+#    settings=SerializerSettings(base=10, prec=0, signed=True, 
+#                                time_sep=', ',
+#                                bit_sep='',
+#                                plus_sign='',
+#                                minus_sign='-',
+#                                half_bin_correction=False,
+#                                decimal_point='')
+#)
 
 arima_hypers = dict(p=[12,30], d=[1,2], q=[0])
 
